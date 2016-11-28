@@ -18,7 +18,7 @@
 1. [Usage - Configuration options and additional functionality](#usage)
 1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 1. [Limitations - OS compatibility, etc.](#limitations)
-7. [Jails available](#jails-available)
+1. [Jails available](#jails-available)
     * [Pre-defined jails](#pre-defined-jails)
     * [Custom jails](#custom-jails)
 1. [Development - Guide for contributing to the module](#development)
@@ -64,10 +64,14 @@ Install fail2ban with the recommended parameters.
 ```
 
 ### Config file template
-You'll find an example on examples folder for each operating system.
-Previous example show how to enable config for every supported operating system, using ${::osfamily}/${::lsbdistcodename} fact.
 
-You can also manually specify a different configuration template. To do it, instead of the one using ${::osfamily}/${::lsbdistcodename} fact, use your desired configuration template:
+You'll find an example on examples folder for each operating system. Previous
+example show how to enable config for every supported operating system, using
+${::osfamily}/${::lsbdistcodename} fact.
+
+You can also manually specify a different configuration template. To do it,
+instead of the one using ${::osfamily}/${::lsbdistcodename} fact, use your
+desired configuration template:
 
 ```puppet
   class { 'fail2ban':
@@ -339,8 +343,11 @@ Determines which ip addresses will not be reported. Defaults to '['127.0.0.1/8',
 Determines which custom jails should be included (see [Custom jails](#custom-jails).
 
 ## Jails available
+
 ### Pre-defined jails
-#### RedHat osfamily:
+
+#### RedHat osfamily
+
 * 3proxy
 * apache-auth
 * apache-badbots
@@ -413,7 +420,8 @@ Determines which custom jails should be included (see [Custom jails](#custom-jai
 * wuftpd
 * xinetd-fail
 
-#### Debian osfamily:
+#### Debian osfamily
+
 * apache
 * apache-modsecurity
 * apache-multiport
@@ -453,8 +461,8 @@ Determines which custom jails should be included (see [Custom jails](#custom-jai
 * wuftpd
 * xinetd-fail
 
-
 ### Custom jails
+
 Users can add their own jails by using this YAML definition:
 
 ```yaml
