@@ -1,0 +1,16 @@
+---
+lookup_options:
+  fail2ban::jails:
+    merge:
+      strategy: unique
+  fail2ban::whitelist:
+    merge:
+      strategy: unique
+
+fail2ban::jails:
+  - 'ssh'
+  - 'ssh-ddos'
+
+fail2ban::whitelist:
+  - '127.0.0.1/8'
+  - '192.168.56.0/24'

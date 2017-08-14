@@ -32,9 +32,9 @@ class fail2ban (
   $action                   = 'action_mb',
   $bantime                  = 432000,
   $email                    = "fail2ban@${::domain}",
-  $jails                    = ['ssh', 'ssh-ddos'],
+  $jails,
   $maxretry                 = 3,
-  $whitelist                = ['127.0.0.1/8', '192.168.56.0/24'],
+  $whitelist,
   $custom_jails             = undef,
 ) inherits ::fail2ban::params {
   validate_re($package_ensure, '^(absent|latest|present|purged)$')

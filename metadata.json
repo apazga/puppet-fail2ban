@@ -63,5 +63,6 @@
   ],
   "tags": [
     "fail2ban"
-  ]
+  ],
+  "data_provider": "hiera"
 }

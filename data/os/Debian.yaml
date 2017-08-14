@@ -1,0 +1,7 @@
+---
+# bashrc
+base::bashrc_path: '/etc/bash.bashrc'
+
+# snmp
+base::snmp_package_name: 'snmpd'
+base::snmp_service_name: 'snmpd'
